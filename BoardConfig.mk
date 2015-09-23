@@ -63,6 +63,7 @@ TW_THEME := portrait_hdpi
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_INCLUDE_CRYPTO := true
 TW_NO_USB_STORAGE := true
 TW_SCREEN_BLANK_ON_BOOT := true
