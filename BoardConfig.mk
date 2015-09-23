@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+TARGET_OTA_ASSERT_DEVICE := g4,h811
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8992
 TARGET_NO_BOOTLOADER := true
