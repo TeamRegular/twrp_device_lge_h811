@@ -39,11 +39,10 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Kernel
 TARGET_PREBUILT_KERNEL := device/lge/h811/kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 user_debug=31 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.hardware=p1 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 user_debug=31 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.hardware=qcom androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02200000 --dt device/lge/h811/dt.img
-COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
@@ -54,6 +53,7 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 41943040
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4492099584
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 24935137280
 BOARD_FLASH_BLOCK_SIZE := 262144
+COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # Recovery
 TARGET_RECOVERY_DEVICE_DIRS += device/lge/h811
